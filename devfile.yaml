@@ -21,12 +21,13 @@ components:
           protocol: http
   - name: internal-browser
     container:
-      image: lscr.io/linuxserver/chromium:latest
+      image: kasmweb/chromium:1.14.0
       env:
-        - name: TITLE
-          value: "Cluster Browser"
+        - name: VNC_PW
+          value: "password"
+      memoryLimit: 2Gi
       endpoints:
         - name: browser-gui
-          targetPort: 3000
+          targetPort: 6901
           exposure: public
-          protocol: http
+          protocol: https
