@@ -19,7 +19,6 @@ components:
           targetPort: 8080
           exposure: public
           protocol: http
-
   - name: internal-browser
     container:
       image: lscr.io/linuxserver/chromium:latest
