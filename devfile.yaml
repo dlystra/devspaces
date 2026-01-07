@@ -13,8 +13,8 @@ components:
       image: docker.io/swaggerapi/swagger-ui:latest
       env:
         - name: SWAGGER_JSON_URL
-          value: "https://petstore.swagger.io/v2/swagger.json"
+          value: "http://localhost:3100/docs/openapi.json"
       endpoints:
-        - name: swagger-interface
+        - name: swagger
           targetPort: 8080
           exposure: public
