@@ -14,7 +14,10 @@ components:
       env:
         - name: SWAGGER_JSON_URL
           value: "http://localhost:3100/docs/openapi.json"
+        - name: PORT
+          value: "8080"
       endpoints:
         - name: swagger
           targetPort: 8080
           exposure: public
+          protocol: http
