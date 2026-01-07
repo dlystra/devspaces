@@ -1,10 +1,9 @@
 schemaVersion: 2.2.0
 metadata:
-  name: python-swagger-setup
+  name: swagger-test-complete
+attributes:
+  editor: eclipse/che-code/latest
 components:
-  - name: code-oss
-    plugin:
-      id: eclipse/che-code/latest
   - name: tools
     container:
       image: quay.io/devfile/universal-developer-image:latest
@@ -14,8 +13,8 @@ components:
       image: docker.io/swaggerapi/swagger-ui:latest
       env:
         - name: SWAGGER_JSON_URL
-          value: "http://localhost:3100/docs/openapi.json"
+          value: "https://petstore.swagger.io/v2/swagger.json"
       endpoints:
-        - name: swagger-port
+        - name: swagger-interface
           targetPort: 8080
           exposure: public
