@@ -2,6 +2,13 @@ schemaVersion: 2.2.0
 metadata:
   name: python-swagger-setup
 components:
+  - name: code-oss
+    plugin:
+      id: eclipse/che-code/latest
+  - name: tools
+    container:
+      image: quay.io/devfile/universal-developer-image:latest
+      memoryLimit: 2Gi
   - name: swagger-ui
     container:
       image: docker.io/swaggerapi/swagger-ui:latest
