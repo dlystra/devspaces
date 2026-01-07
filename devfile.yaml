@@ -6,7 +6,7 @@ attributes:
 components:
   - name: tools
     container:
-      image: quay.io/devfile/universal-developer-image:latest
+      image: quay.io/goswagger/swagger-ui:latest
       memoryLimit: 2Gi
   - name: swagger-ui
     container:
