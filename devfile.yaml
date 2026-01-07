@@ -12,8 +12,6 @@ components:
     container:
       image: docker.io/swaggerapi/swagger-ui:latest
       env:
-        - name: SWAGGER_JSON_URL
-          value: "http://localhost:3100/docs/openapi.json"
         - name: PORT
           value: "8080"
       endpoints:
