@@ -1,0 +1,14 @@
+schemaVersion: 2.2.0
+metadata:
+  name: python-swagger-setup
+components:
+  - name: swagger-ui
+    container:
+      image: quay.io/repository/swagger-api/swagger-ui:latest
+      env:
+        - name: SWAGGER_JSON_URL
+          value: "http://localhost:3100/docs/openapi.json"
+      endpoints:
+        - name: swagger-port
+          targetPort: 8080
+          exposure: public
