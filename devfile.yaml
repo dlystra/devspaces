@@ -19,15 +19,3 @@ components:
           targetPort: 8080
           exposure: public
           protocol: http
-  - name: internal-browser
-    container:
-      image: kasmweb/chromium:1.14.0
-      env:
-        - name: VNC_PW
-          value: "password"
-      memoryLimit: 2Gi
-      endpoints:
-        - name: browser-gui
-          targetPort: 6901
-          exposure: public
-          protocol: https
