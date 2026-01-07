@@ -14,10 +14,20 @@ components:
       env:
         - name: PORT
           value: "8080"
-        - name: SWAGGER_JSON_URL
-          value: "http://standalone-api.che-kube-admin-devspaces-ilbcsf.svc.cluster.local:8080/openapi.json"
       endpoints:
         - name: swagger
           targetPort: 8080
+          exposure: public
+          protocol: http
+
+  - name: internal-browser
+    container:
+      image: lscr.io/linuxserver/chromium:latest
+      env:
+        - name: TITLE
+          value: "Cluster Browser"
+      endpoints:
+        - name: browser-gui
+          targetPort: 3000
           exposure: public
           protocol: http
